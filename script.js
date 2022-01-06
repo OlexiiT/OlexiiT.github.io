@@ -122,7 +122,7 @@ function set_cookie(text) {
 }
 
 function notify_about_cookies() {
-	if (get_cookie(task_3_cookieName) != null) {
+	if (get_cookie(task_3_cookieName) != null && get_cookie(task_3_cookieName) != 'null') {
 		alert(get_cookie(task_3_cookieName))
 	    let confirm = window.confirm(get_cookie(task_3_cookieName) +
 	        ". Ви хочете видалити кукі: " + task_3_cookieName + "?")
