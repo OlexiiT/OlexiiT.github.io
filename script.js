@@ -138,7 +138,8 @@ function notify_about_cookies() {
 }
 
 function delete_cookie(name) {
-	document.cookie = encodeURIComponent(name) + "=null"
+    let expireDate = new Date(Date.now() + 1e3);
+	document.cookie = encodeURIComponent(name) + "=null; expires=" + expireDate
 }
 
 
