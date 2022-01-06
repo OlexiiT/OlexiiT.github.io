@@ -122,19 +122,21 @@ function set_cookie(text) {
 }
 
 function notify_about_cookies() {
-    let confirm = window.confirm(get_cookie(task_3_cookieName) +
-        ". Ви хочете видалити кукі: " + task_3_cookieName + "?")
+	if (get.cookie(task_3_cookieName) != null) {
+	    let confirm = window.confirm(get_cookie(task_3_cookieName) +
+	        ". Ви хочете видалити кукі: " + task_3_cookieName + "?")
 
-    if (confirm === true) {
-        delete_cookie(task_3_cookieName)
-        addForm()
-    }
-    else {
-        alert("Файл кукі з минулого разу все ще існує, " +
-            "тому сторінку потрібно оновити! Файл кукі буде видалено!")
-        delete_cookie(task_3_cookieName)
-        window.location.reload()
-    }
+	    if (confirm === true) {
+	        delete_cookie(task_3_cookieName)
+	        addForm()
+	    }
+	    else {
+	        alert("Файл кукі з минулого разу все ще існує, " +
+	            "тому сторінку потрібно оновити! Файл кукі буде видалено!")
+	        delete_cookie(task_3_cookieName)
+	        window.location.reload()
+	    }
+	}
 }
 
 function delete_cookie(name) {
