@@ -127,7 +127,7 @@ function notify_about_cookies() {
 
     if (confirm === true) {
         delete_cookie(task_3_cookieName)
-        add_form()
+        addForm()
     }
     else {
         alert("Файл кукі з минулого разу все ще існує, " +
