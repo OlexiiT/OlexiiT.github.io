@@ -137,6 +137,10 @@ function notify_about_cookies() {
     }
 }
 
+function delete_cookie(name) {
+	document.cookie = encodeURIComponent(name) + "=null"
+}
+
 
 
 setFont()
