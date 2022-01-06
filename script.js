@@ -133,7 +133,7 @@ function notify_about_cookies() {
         alert("Файл кукі з минулого разу все ще існує, " +
             "тому сторінку потрібно оновити! Файл кукі буде видалено!")
         delete_cookie(T3_COOKIE_NAME)
-        add_form()
+        window.location.reload()
     }
 }
 
