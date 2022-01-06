@@ -137,6 +137,8 @@ function notify_about_cookies() {
 	        delete_cookie(task_3_cookieName)
 	        window.location.reload()
 	    }
+	} else {
+		addForm()
 	}
 }
 
