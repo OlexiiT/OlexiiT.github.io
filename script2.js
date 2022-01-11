@@ -6,7 +6,7 @@ function addMessage(id) {
 }
 
 function saveMessage(message) {
-	localStorage.setItem("message_" + c, message + " at " + (new Date()))
+	localStorage.setItem("message_" + c, message + " at " + (getTime(new Date())))
 	c++
 }
 
@@ -24,3 +24,10 @@ function printMessages() {
 	}
 }
 
+function getTime(date) {
+	var hours = date.getHours()
+	var minutes = date.getMinutes()
+	var seconds = date.getSeconds()
+	var str = hours + ":" + minutes + ":" + seconds
+	return str
+}
